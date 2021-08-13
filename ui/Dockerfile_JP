@@ -1,0 +1,25 @@
+FROM sabotagecla6/ubuntu-ui
+
+# ***********************************************
+# install wine
+# ***********************************************
+RUN apt-get update && \
+   DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        language-pack-ja
+
+# ***********************************************
+# set local
+# ***********************************************
+RUN update-locale LANG=ja_JP.UTF-8
+
+# ***********************************************
+# setting keyboard layout
+# ***********************************************
+RUN { \
+      echo 'XKBMODEL="pc105"'; \
+      echo 'XKBLAYOUT="jp""'; \
+      echo 'XKBVARIANT=""'; \
+      echo 'XKBOPTIONS=""'; \
+      echo ''; \
+      echo 'BACKSPACE="guess"'; \
+    } > /etc/default/keyboard

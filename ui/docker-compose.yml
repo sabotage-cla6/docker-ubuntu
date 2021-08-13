@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  test:
+    image: sabotagecla6/ubuntu-ui:jp
+    volumes:
+      - $HOME/.Xauthority:/root/.Xauthority
+    shm_size: '1G'
+    environment:
+      - DISPLAY=${DISPLAY}
+    command: /bin/bash
