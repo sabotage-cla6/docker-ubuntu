@@ -14,11 +14,11 @@ chmod u+x ./build.sh
 
 # What is images
 
-- sabotagecla6/ubuntu_base:latest
+- sabotagecla6/ubuntu
   - ubuntu image is availe for used bash-completion
-- sabotagecla6/ubuntu_ui:latest
+- sabotagecla6/ubuntu-ui:latest
   - ubuntu image is availe for used x11 apps
-- sabotagecla6/ubuntu_ui:jp
+- sabotagecla6/ubuntu-ui-jp
   - ubuntu image is availe for used x11 apps and Japanese.
 
 
