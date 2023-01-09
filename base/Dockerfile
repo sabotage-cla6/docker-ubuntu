@@ -1,23 +1,12 @@
-FROM ubuntu
+FROM ubuntu:20.04
 
 # ***********************************************
 # install packages for xrdp, and do setting
 # ***********************************************
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-        apt-utils sudo curl bash-completion 
-
-# ***********************************************
-# setting skelton
-# ***********************************************
-RUN mkdir -p /etc/skel/Desktop \
-    /etc/skel/Downloads \
-    /etc/skel/Templates \
-    /etc/skel/Public \
-    /etc/skel/Documents \
-    /etc/skel/Music \
-    /etc/skel/Pictures \
-    /etc/skel/Videos
+        apt-utils sudo curl bash-completion \
+        vim 
 
 # ***********************************************
 # bash complete 
@@ -45,3 +34,4 @@ RUN { \
         echo "fi"; \
         echo ""; \
     } >> /root/.bashrc
+

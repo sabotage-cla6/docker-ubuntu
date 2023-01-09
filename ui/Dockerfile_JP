@@ -1,4 +1,4 @@
-FROM sabotagecla6/ubuntu-ui
+FROM sabotagecla6/ubuntu-ui:20.04
 
 # ***********************************************
 # install wine
@@ -34,3 +34,5 @@ RUN { \
       echo ''; \
       echo 'BACKSPACE="guess"'; \
     } > /etc/default/keyboard
+
+ENTRYPOINT ["/opt/endpoint.sh"]
